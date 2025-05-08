@@ -1,7 +1,7 @@
 # go-rest-application
 A simple RESTful API built with Go.This project demonstrates a clean architecture with separated concerns for controllers, services, models, and data transfer objects (DTOs).
-Table of Contents
 
+Table of Contents::
 User CRUD operations (Create, Read, Update, Delete)
 JSON-based API responses
 Swagger documentation for API endpoints
@@ -9,12 +9,13 @@ Modular and scalable codebase
 Error handling with generic error types
 Configuration for storage as a database
 
+Tech::
 Go: Backend programming language
 Gin: HTTP web framework
 Swagger: API documentation
 JSON: Data storage (users.json)
 
-Project Structure
+Project Structure::
 .
 ├── DB
 │   └── users.json              # JSON file for user data storage
@@ -51,8 +52,7 @@ Project Structure
     └── utils                   # Utility functions
 
 
-{{Setup}}
-
+Setup:: 
 Clone the repository:
 git clone https://github.com/yatenderpareek7887/go-rest-application.git
 cd go-rest-application
@@ -62,12 +62,13 @@ Install dependencies:
 go mod tidy
 
 Running the Application::
-Start the server:
+Start the server
 go run src/main.go
 
-The API will be available ::
+Access::
+The API will be available::
 http://localhost:8080/*
 
-Access Swagger documentation ::
+Access Swagger documentation::
 For detailed endpoint information, refer to the Swagger UI at
 http://localhost:8080/swagger/api/docs/index.html

@@ -61,7 +61,6 @@ func CreateUser(c *gin.Context) {
 		return
 	}
 
-	// Validate struct fields
 	if err := validate.Struct(userDto); err != nil {
 		c.JSON(http.StatusBadRequest, genricerror.ErrorResponse{Message: "Validation failed: " + err.Error()})
 		return
@@ -72,7 +71,6 @@ func CreateUser(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, genricerror.ErrorResponse{Message: "Failed to load users: " + err.Error()})
 		return
 	}
-	// Check for duplicate email
 	for _, existingUser := range existingUsers {
 		if existingUser.Email == userDto.Email {
 			c.JSON(http.StatusConflict, genricerror.ErrorResponse{Message: "User with this email already exists"})
@@ -109,7 +107,6 @@ func UpdateUser(c *gin.Context) {
 		c.JSON(http.StatusBadRequest, genricerror.ErrorResponse{Message: err.Error()})
 		return
 	}
-	// Validate struct fields
 	if err := validate.Struct(updateUserdto); err != nil {
 		c.JSON(http.StatusBadRequest, genricerror.ErrorResponse{Message: "Validation failed: " + err.Error()})
 		return
@@ -119,7 +116,6 @@ func UpdateUser(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, genricerror.ErrorResponse{Message: "Failed to load users: " + err.Error()})
 		return
 	}
-	// Check for duplicate email
 	for _, existingUser := range existingUsers {
 		if existingUser.Email == updateUserdto.Email {
 			c.JSON(http.StatusConflict, genricerror.ErrorResponse{Message: "User with this email already exists"})

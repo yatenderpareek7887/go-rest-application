@@ -1,7 +1,7 @@
 package swagger
 
 import (
-	_ "go-rest-application/src/docs" // Import the generated Swagger docs
+	_ "go-rest-application/src/docs"
 
 	"github.com/gin-gonic/gin"
 	swaggerFiles "github.com/swaggo/files"

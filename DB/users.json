@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "string",
+    "email": "yatender@gmail.com",
+    "city": "string",
+    "age": 30
+  },
+  {
+    "id": 2,
+    "name": "string",
+    "email": "yatenders@gmail.com",
+    "city": "string",
+    "age": 30
+  }
+]
